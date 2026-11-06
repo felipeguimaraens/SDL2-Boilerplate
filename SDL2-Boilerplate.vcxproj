@@ -79,7 +79,7 @@
     <LibraryPath>$(MSBuildProjectDirectory)\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(MSBuildProjectDirectory)\include\SDL2;$(IncludePath)</IncludePath>
+    <IncludePath>$(MSBuildProjectDirectory)\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(MSBuildProjectDirectory)\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,9 +128,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(MSBuildProjectDirectory)\lib\x64\SDL2.lib;$(MSBuildProjectDirectory)\lib\x64\SDL2main.lib;$(MSBuildProjectDirectory)\lib\x64\SDL2test.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Visual Studio 2022 - projects\SDL2-Boilerplate\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(MSBuildProjectDirectory)\lib\x64\SDL2.lib;$(MSBuildProjectDirectory)\lib\x64\SDL2main.lib;$(MSBuildProjectDirectory)\lib\x64\SDL2test.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
